@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Para separar los elementos */
+    align-items: center;
+    background-color: #78273E; /* Color de fondo */
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    position: fixed;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+/*MENU DESPLAZABLE DE OPCIONES*/
+.menu-icon {
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-middle {
+    flex: 1;
+    text-align: center;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-link.salir {
+    font-size: 16px; /* Cambia el tamaño de la letra del enlace "Salir" */
+    color: white; 
+    margin: 0 6px;
+    margin-right: 20px;
+}
+
+/* Opcional: Efecto hover para los links */
+.navbar a:hover {
+    text-decoration: none;
+    color: #eee;
+}
+
+/* LOGO TECNM */
+.nav-logo {
+    width: 120px; /* Ajusta el tamaño de la imagen */
+    margin-left: 10px; 
+}
+
+
+/* LOGO ITP */
+.nav-logo2 {
+    width: 66px; /* Ajusta el tamaño de la imagen */
+    margin-left: 20px; /* Márgenes alrededor de la imagen */
+}
+
+/* IMAGEN PERFIL */
+.nav-right {
+    position: relative; /* Para el posicionamiento de la imagen de perfil */
+    top: 1px; /* Ajusta según sea necesario */
+    right: 10px; /* Ajusta según sea necesario */
+}
+
+.img-corner {
+    width: 30px; /* Tamaño de la imagen */
+    height: 30px; /* Tamaño de la imagen */
+    /*border-radius: 25%; /* Hacer la imagen circular */
+}
+
+
+        
+.dropdown-menu {
+    display: none; /* Ocultar el menú por defecto */
+    background-color: #78273E;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.695); 
+    position: absolute;
+    top: 80px; /* Ajustar según la altura de la barra de navegación */
+    left: 25px; /* Ajustar para que se alinee correctamente */
+    border-radius: 5px;
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+.dropdown-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* TEXTO BARRA */
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto Black';
+    font-size: 22px;
+}
+
+.dropdown-menu ul li {
+    padding: 14px 20px;
+    font-family: "Roboto";
+    font-size: 15px;
+}
+
+.dropdown-menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu ul li:hover {
+    background-color: #a6a6a68b; /* Color al pasar el mouse */
+}
+
+
+/*ESTILOS PARA LAS NOTIFICACIONES*/
+/* Estilo para alertas de éxito */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+/* Iconos para alertas */
+.alert .icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.alert .close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: inherit;
+}

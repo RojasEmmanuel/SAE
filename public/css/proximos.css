@@ -1,0 +1,318 @@
+/* Estilo de la sección del título */
+*{
+    font-family: "Arial", sans-serif;
+}
+.seccion-titulo {
+    text-align: left;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.seccion-titulo h1 {
+    margin: 0;
+    font-size: 1.7rem;
+    color: #444;
+}
+
+/* Contenedor de eventos */
+.contenedor-eventos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    border-radius: 12px;
+    width: calc(100% - 10%);
+    gap: 20px;
+    margin: 40px auto;
+    margin-top: 5px;
+}
+
+/*background-color: white; /* Fondo claro y profesional 
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Sombra suave 
+    margin: 40px auto;
+    gap: 20px;
+    width: calc(100% - 10%);*/
+
+/* Estilos generales de las tarjetas */
+.tarjeta-evento {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta-evento:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.tarjeta-evento .encabezado {
+    padding: 15px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.tarjeta-evento .contenido {
+    padding: 15px;
+}
+
+.tarjeta-evento p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+.tarjeta-evento .descripcion {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+}
+
+/* Estilos por tipo de evento */
+
+.tipo-educativo .encabezado {
+    background: #67BB68;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Clase para eventos de tipo deportivo */
+.tipo-deportivo .encabezado {
+    background: #5C9BEA;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Clase para eventos de tipo cultural */
+.tipo-cultural .encabezado{
+    background: #f9a825;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Clase para eventos de tipo cívico */
+.tipo-civico .encabezado{
+    background-color: #E47273;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .contenedor-eventos {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*ESTILOS PARA EL MODAL DE EDIT Y PARA LOS BOTONES*/
+/* Estilo para las tarjetas de evento */
+.tarjeta-evento {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-evento .encabezado h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.tarjeta-evento .contenido p {
+    margin: 5px 0;
+}
+
+.tarjeta-evento .acciones {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tarjeta-evento .btn-eliminar,
+.tarjeta-evento .btn-editar {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.tarjeta-evento .btn-eliminar {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.tarjeta-evento .btn-editar {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Estilo para las tarjetas de evento */
+.tarjeta-evento {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-evento .encabezado h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.tarjeta-evento .contenido p {
+    margin: 5px 0;
+}
+
+.tarjeta-evento .acciones {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tarjeta-evento .btn-eliminar,
+.tarjeta-evento .btn-editar {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.tarjeta-evento .btn-eliminar {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.tarjeta-evento .btn-editar {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Estilo para el modal */
+.modal-overlay10 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal10 {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 90%;
+}
+
+.modal-header10 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-header10 h2 {
+    margin: 0;
+}
+
+.modal-header10 button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal-body10 .form-group {
+    margin-bottom: 15px;
+}
+
+.modal-body10 .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-body10 .form-group input,
+.modal-body10 .form-group select,
+.modal-body10 .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.modal-body10 .form-group textarea {
+    resize: vertical;
+}
+
+.modal-body10 .button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-body10 .button-group button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.modal-body10 .button-group .cancel-button {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.modal-body10 .button-group button[type="submit"] {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+/* Estilos adicionales para pantallas pequeñas */
+@media (max-width: 600px) {
+    .modal10 {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .modal-header10 h2 {
+        font-size: 18px;
+    }
+
+    .modal-body10 .form-group input,
+    .modal-body10 .form-group select,
+    .modal-body10 .form-group textarea {
+        padding: 8px;
+    }
+
+    .modal-body10 .button-group button {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+}
+
+.idEvento{
+    display: none;
+}
