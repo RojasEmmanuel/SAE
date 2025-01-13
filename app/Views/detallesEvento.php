@@ -9,35 +9,36 @@
     
     <br>    
     <div class="descripcionEvento">
-        <p><b>Descripción: </b><?= esc($evento['descripcion']); ?></p>
-        <p><b>Responsable: </b><?= esc($evento['responsable']); ?></p>
-        <p><b>Área: </b><?= esc($evento['area']); ?></p>
+        <p style="text-align: center;"><b><i>Descripción:</i> </b><?= esc($evento['descripcion']); ?></p>
     </div>
    
     <div class="estadisticas" style="display: flex; align-items: center; justify-content: center; width: 90%;">
 
         <table class="datosEstadisticos">
-            <caption><b>Estadisticas</b></caption>
+        <tr>
+                <td>Responsable</td>
+                <td><?= esc($evento['responsable']); ?></td>
+            </tr>   
             <tr>
-                <td>Total de Estudiantes</td>
-                <td>560</td>
-            </tr>
-            <tr>
-                <td>Total de Estudiantes Hombres</td>
-                <td>340</td>
-            </tr>
-            <tr>
-                <td>Total de Estudiantes Mujeres</td>
-                <td>220</td>
-            </tr>
+                <td>Área</td>
+                <td><?= esc($evento['area']); ?></td>
+            </tr>         
             
             <tr>
-                <td>Total de Docentes</td>
-                <td>18</td>
+                <td>Total de Estudiantes que Asistieron</td>
+                <td><?= esc($totalAsistentes); ?></td>
             </tr>
             <tr>
-                <td>Porcentaje de Asistencia (según la matrícula)</td>
-                <td>70%</td>
+                <td>Total de Estudiantes Hombres que Asistieron</td>
+                <td><?= esc($totalHombres); ?></td>
+            </tr>
+            <tr>
+                <td>Total de Estudiantes Mujeres que Asistieron</td>
+                <td><?= esc($totalMujeres); ?></td>
+            </tr>
+            <tr>
+                <td>Porcentaje de Participación Total</td>
+                <td><?= esc(number_format($porcentajeAsistentes, 2)); ?>%</td>
             </tr>
         </table>
     </div>
@@ -47,11 +48,15 @@
     <h3 class="subtitulo" style="text-align: center;">Ordenar</h3> <br>
     <div class="botonesCentro">
 
-        <!-- Campo de búsqueda -->
-        <div class="busquedaCentro">
-            <input type="text" id="buscarNControl" placeholder="Buscar por nombre 🔎">
+        <div class="input-wrapper">
+        <button class="icon"> 
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="25px" width="25px">
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff" d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"></path>
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff" d="M22 22L20 20"></path>
+            </svg>
+        </button>
+        <input placeholder="nombre.." id="buscarNControl" class="input" name="text" type="text">
         </div>
-
 
         <div class="btnOrdenar">
             <button class="btn1" onclick="ordenarTabla(0)">N. Control</button>
@@ -170,17 +175,17 @@
         <h2>Filtrar Estudiantes</h2>
         <form id="filtrarForm4">
             <label for="carrera4">Carrera:</label>
-            <select id="carrera4" name="carrera">
+            <select class="campo" id="carrera4" name="carrera">
                 <option value="">Todas</option>
                 <!-- Opciones de carrera se llenarán dinámicamente -->
             </select>
             <label for="semestre4">Semestre:</label>
-            <select id="semestre4" name="semestre">
+            <select class="campo"  id="semestre4" name="semestre">
                 <option value="">Todos</option>
                 <!-- Opciones de semestre se llenarán dinámicamente -->
             </select>
             <label for="sexo4">Sexo:</label>
-            <select id="sexo4" name="sexo">
+            <select class="campo"  id="sexo4" name="sexo">
                 <option value="">Todos</option>
                 <option value="Masculino">Masculino</option>
                 <option value="Femenino">Femenino</option>

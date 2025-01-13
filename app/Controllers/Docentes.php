@@ -17,4 +17,12 @@ class Docentes extends BaseController
         
         return view('docentes',$data);
     }
+
+    public function getAcademias()
+    {
+        $db = \Config\Database::connect();
+        $query = $db->query("SELECT DISTINCT academia FROM docentes");
+        $result = $query->getResultArray();
+        return $this->response->setJSON($result);
+    }
 }

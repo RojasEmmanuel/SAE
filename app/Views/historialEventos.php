@@ -10,7 +10,6 @@
     
     <div class="event-gridUno">
         <?php
-            // Mapeo de tipos de eventos a sus respectivas imágenes
             $tipoImagenes = [
                 "Cívico" => "civico.png",
                 "Cultural" => "Cultural.png",
@@ -26,8 +25,12 @@
                 <div class="fechaUno"> <?= esc($history->fecha); ?> </div>
                 
                 <a href="<?= base_url('/detalles/' . $history->idEvento) ?>" class="titleUno"><?= esc($history->nombre); ?></a>
+
                 <form action="<?= base_url('/historial/eliminar/' . $history->idEvento) ?>" method="post" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este evento?');">
-                    <button type="submit" class="btnEliminar1">Eliminar</button>
+                <button class="btnEliminar1" type="submit">Eliminar
+                </button>
+
+
                 </form>
             </div>
         <?php endforeach; ?>

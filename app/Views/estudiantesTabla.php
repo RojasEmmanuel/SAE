@@ -48,10 +48,17 @@
     
     <h3 class="subtitulo" style="text-align: center;">Ordenar</h3> <br>
     <div class="botonesCentro">
-         <!-- Campo de búsqueda -->
-         <div class="busquedaCentro">
-            <input type="number" id="buscarNControl" placeholder="Buscar por N. Control 🔎">
+
+        <div class="input-wrapper">
+        <button class="icon"> 
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="25px" width="25px">
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff" d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"></path>
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff" d="M22 22L20 20"></path>
+            </svg>
+        </button>
+        <input placeholder="nombre.." id="buscarNControl" class="input" name="text" type="text">
         </div>
+
 
         <div class="btnOrdenar">
             <button class="btn1" id="ordenarNControl">N. Control</button>
@@ -120,17 +127,17 @@
         <h2>Filtrar Estudiantes</h2>
         <form id="filtrarForm4">
             <label for="carrera4">Carrera:</label>
-            <select id="carrera4" name="carrera">
+            <select  class="campo"  id="carrera4" name="carrera">
                 <option value="">Todas</option>
                 <!-- Opciones de carrera se llenarán dinámicamente -->
             </select>
             <label for="semestre4">Semestre:</label>
-            <select id="semestre4" name="semestre">
+            <select  class="campo"  id="semestre4" name="semestre">
                 <option value="">Todos</option>
                 <!-- Opciones de semestre se llenarán dinámicamente -->
             </select>
             <label for="sexo4">Sexo:</label>
-            <select id="sexo4" name="sexo">
+            <select  class="campo" id="sexo4" name="sexo">
                 <option value="">Todos</option>
                 <option value="Masculino">Masculino</option>
                 <option value="Femenino">Femenino</option>
@@ -266,7 +273,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('buscarNControl').addEventListener('input', function() {
         const searchValue = this.value.toLowerCase();
         rows.forEach(row => {
-            const nControl = row.cells[0].textContent.toLowerCase();
+            const nControl = row.cells[1].textContent.toLowerCase();
             if (nControl.includes(searchValue)) {
                 row.style.display = '';
             } else {

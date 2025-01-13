@@ -13,6 +13,26 @@ class DetallesEvt extends BaseController
         $estudiantesModel = new EstudiantesModel();
         $eventosModel = new EventosModel();
 
+        // Obtener el total de estudiantes
+        $totalEstudiantes = $estudiantesModel->countAllResults();
+
+        // Obtener los IDs de los estudiantes que asistieron al evento
+        $asistencias = $asistenciasModel->where('idEvento', $idEvento)->findAll();
+        $idEstudiantes = array_column($asistencias, 'nroControl');
+
+        // Obtener el total de estudiantes que asistieron al evento
+        $totalAsistentes = count($idEstudiantes);
+
+        // Obtener el total de estudiantes hombres que asistieron al evento
+        $totalHombres = $estudiantesModel->whereIn('nroControl', $idEstudiantes)->where('sexo', 'M')->countAllResults();
+
+        // Obtener el total de estudiantes mujeres que asistieron al evento
+        $totalMujeres = $estudiantesModel->whereIn('nroControl', $idEstudiantes)->where('sexo', 'F')->countAllResults();
+
+        // Calcular el porcentaje de participación
+        $porcentajeAsistentes = ($totalAsistentes / $totalEstudiantes) * 100;
+       
+
         // Obtener los detalles del evento
         $evento = $eventosModel->find($idEvento);
 
@@ -27,6 +47,10 @@ class DetallesEvt extends BaseController
             'title' => 'Detalles del Evento',
             'evento' => $evento,
             'estudiantes' => $estudiantes,
+            'totalAsistentes' => $totalAsistentes,
+            'totalHombres' => $totalHombres,
+            'totalMujeres' => $totalMujeres,
+            'porcentajeAsistentes' => $porcentajeAsistentes,
         ];
         
         return view('detallesEvento', $data);

@@ -41,7 +41,7 @@
             </ul>
 
             <div class="btnLink">
-                <button class="btn1" onclick="openModal()">Registrar Evento</button>
+                <button class="shadow__btn" onclick="openModal()">Registrar Evento</button>
             </div>
 
             <br><br>
@@ -186,7 +186,7 @@
             </div>
             <div class="form-group button-group">
                 <button type="button" class="cancel-button" onclick="closeModal()">Cancelar</button>
-                <button type="submit">Registrar Evento</button>
+                <button class="shadow__btn">Registrar Evento</button>
             </div>
         </form>
     </div>

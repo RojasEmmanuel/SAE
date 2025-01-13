@@ -14,7 +14,9 @@ $routes->post('historial/eliminar/(:num)', 'Historial::eliminar/$1');
 
 
 $routes->get('formatos', 'Formatos::index');
+
 $routes->get('docentes', 'Docentes::index');
+$routes->get('/getAcademias', 'Docentes::getAcademias');
 
 $routes->get('proximos', 'Proximos::index');
 $routes->get('proximos/eliminarEvento/(:num)', 'Proximos::eliminarEvento/$1');
@@ -28,4 +30,5 @@ $routes->get('principal', 'Principal::index');
 $routes->post('principal/insertarEvento', 'Principal::insertarEvento');
 
 $routes->get('/', 'Login::index');
-$routes->post('login', 'Login::validar');
+$routes->post('auth', 'Login::auth');
+$routes->get('logout', 'Login::logout');

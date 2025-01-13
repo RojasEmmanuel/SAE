@@ -1,0 +1,79 @@
+#--------------------------------------------------------------------
+# ENVIRONMENT
+#--------------------------------------------------------------------
+
+#CI_ENVIRONMENT = development  # development, testing o production
+
+#--------------------------------------------------------------------
+# DEBUG
+#--------------------------------------------------------------------
+
+#app.forceGlobalSecureRequests = false # true para forzar HTTPS
+
+#--------------------------------------------------------------------
+# APP
+#--------------------------------------------------------------------
+
+#app.baseURL = 'http://localhost/nombre_de_tu_proyecto/public/' # URL base de tu aplicación
+#app.indexPage = '' # Nombre del archivo index (generalmente vacío en CI4)
+#app.uriProtocol = 'REQUEST_URI' # Protocolo URI
+#app.charset = 'UTF-8' # Codificación de caracteres
+#app.defaultLocale = 'es' # Idioma predeterminado
+#app.CSPEnabled = false # Activar Content Security Policy
+#app.forceHTTPS = false # Forzar HTTPS (obsoleto, usa app.forceGlobalSecureRequests)
+
+#--------------------------------------------------------------------
+# DATABASE
+#--------------------------------------------------------------------
+
+#database.default.hostname = 'localhost' # Host de la base de datos
+#database.default.database = 'nombre_de_tu_base_de_datos' # Nombre de la base de datos
+#database.default.username = 'usuario_de_tu_base_de_datos' # Usuario de la base de datos
+#database.default.password = 'contraseña_de_tu_base_de_datos' # Contraseña de la base de datos
+#database.default.DBDriver = 'MySQLi' # Driver de la base de datos
+#database.default.DBPrefix = '' # Prefijo de las tablas (opcional)
+#database.default.pConnect = false # Conexión persistente
+#database.default.DBDebug = (ENVIRONMENT !== 'production') # Depuración de la base de datos
+#database.default.cacheOn = false # Caché de consultas
+#database.default.cacheDir = APPPATH . 'cache' # Directorio de caché
+#database.default.charset = 'utf8mb4' # Codificación de la base de datos
+#database.default.collation = 'utf8mb4_general_ci' # Cotejamiento de la base de datos
+#database.default.swapPre = '' # Carácter de intercambio de prefijo
+#database.default.encrypt = false # Encriptación de la conexión
+#database.default.compress = false # Compresión de la conexión
+#database.default.strictOn = false # Modo estricto
+#database.default.failover = [] # Configuración de failover
+#database.default.port = 3306 # Puerto de la base de datos
+
+#--------------------------------------------------------------------
+# CACHE
+#--------------------------------------------------------------------
+
+#cache.handler = 'file' # Manejador de caché
+#cache.backupHandler = 'file' # Manejador de respaldo de caché
+#cache.keyPrefix = '' # Prefijo de las claves de caché
+
+#--------------------------------------------------------------------
+# SESSION
+#--------------------------------------------------------------------
+
+#session.driver = 'File' # Controlador de sesión
+#session.cookieName = 'ci_session' # Nombre de la cookie de sesión
+#session.cookieLifetime = 7200 # Tiempo de vida de la cookie de sesión (en segundos)
+#session.cookiePath = '/' # Ruta de la cookie de sesión
+#session.cookieDomain = '' # Dominio de la cookie de sesión
+#session.cookieSecure = false # Cookie segura (HTTPS)
+#session.cookieHTTPOnly = true # Cookie HTTP Only
+#session.regenerateDestroy = false # Regenerar la ID de sesión al destruir
+
+#--------------------------------------------------------------------
+# TIME
+#--------------------------------------------------------------------
+
+#app.timeZone = 'America/Mexico_City' # Zona horaria
+
+#--------------------------------------------------------------------
+# Encryption
+#--------------------------------------------------------------------
+
+#encryption.key = 'pon_aqui_una_clave_aleatoria_de_32_caracteres' # Clave de encriptación (¡IMPORTANTE!)

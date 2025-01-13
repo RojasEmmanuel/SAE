@@ -35,7 +35,7 @@
 
     <div class="TEXTO-SAL">
         <!-- Botón salir -->
-        <a href="<?= base_url('/') ?>" class="nav-link salir">Salir</a>
+        <a href="<?= base_url('logout') ?>" class="nav-link salir">Salir</a>
         <!-- Ícono de perfil -->
     </div>
 

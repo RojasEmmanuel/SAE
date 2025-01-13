@@ -34,10 +34,15 @@
     <h3 class="titulo">Docentes Registrados</h3>
     <h3 class="subtitulo" style="text-align: center;">Ordenar</h3> <br>
     <div class="botonesCentro">
-
-        <!-- Campo de búsqueda -->
-        <div class="busquedaCentro">
-            <input type="text" id="buscarNombre" placeholder="Buscar por nombre 🔎">
+ 
+        <div class="input-wrapper">
+        <button class="icon"> 
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="25px" width="25px">
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff" d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"></path>
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff" d="M22 22L20 20"></path>
+            </svg>
+        </button>
+        <input placeholder="nombre.." id="buscarNombre" class="input" name="text" type="text">
         </div>
 
         <div class="btnOrdenar">
@@ -87,7 +92,7 @@
         <h2>Filtrar Docentes</h2>
         <form id="filtrarForm4">
             <label for="carrera4">Academia:</label>
-            <select id="carrera4" name="carrera">
+            <select class="campo" id="carrera4" name="carrera">
                 <option value="">Todas</option>
                 <option value="Ingeniería Civil">Ingeniería Civil</option>
                 <option value="Ingeniería en Sistemas Computacionales">Ingeniería en Sistemas Computacionales</option>

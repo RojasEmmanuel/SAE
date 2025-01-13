@@ -36,73 +36,48 @@ h1 {
     flex-wrap: wrap; /* Permitir que los elementos se ajusten */
 }
 
+
 .cardUno {
-    width: 350px;
-    height: 180px;
     border-radius: 8px;
-    overflow: hidden;
+    padding: 16px;
+    margin: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    font-family: Arial, sans-serif;
-    margin-bottom: 30px;
+    transition: transform 0.2s;
+}
+
+.cardUno:hover {
+    transform: scale(1.05);
 }
 
 .cardUno img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    border-radius: 8px;
 }
 
 .cardUno .fechaUno {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #78273E;
-    color: white;
-    padding: 4px 8px;
-    border-radius: 12px;
-    font-size: 12px;
+    font-size: 14px;
+    color: #888;
+    margin-top: 8px;
 }
 
 .cardUno .titleUno {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: white; /* Fondo semitransparente */
-    color: rgba(120, 39, 62, 0.85);; /* Cambia el color del texto a blanco para mayor visibilidad */
-    padding: 10px;
-    text-align: center;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-top: 8px;
+    display: block;
 }
 
-.titulo{
-    font-family: "Roboto", sans-serif;
-    font-size: 30px;
-    margin-top: 20px;
-    text-align: center;
-    color: #34495e;
+.cardUno .btnEliminar1 {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 8px;
 }
 
-.btnEliminar1 {
-    background-color: #e74c3c; /* Color de fondo rojo */
-    color: white; /* Color del texto blanco */
-    border: none; /* Sin borde */
-    padding: 10px 20px; /* Relleno */
-    text-align: center; /* Alineación del texto */
-    text-decoration: none; /* Sin subrayado */
-    display: inline-block; /* Mostrar en línea */
-    font-size: 16px; /* Tamaño de la fuente */
-    margin: 10px 2px; /* Margen */
-    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
-    border-radius: 5px; /* Bordes redondeados */
-    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
-    font-family: "Roboto", sans-serif; /* Fuente consistente */
-}
-
-.btnEliminar1:hover {
-    background-color: #c0392b; /* Color de fondo al pasar el cursor */
+.cardUno .btnEliminar1:hover {
+    background-color: #c0392b;
 }

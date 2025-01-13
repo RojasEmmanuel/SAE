@@ -154,8 +154,12 @@ button:hover {
     margin-bottom: 15px;
 }
 
-.descripcionEvento p{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.descripcionEvento {
+    background-color: #f7fafc; /* Fondo gris claro */
+    padding: 16px; /* Padding de 16px */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-top: 16px; /* Margen superior */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
 }
