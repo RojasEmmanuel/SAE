@@ -1,6 +1,7 @@
 <?= $this->extend('layout/template')?>
 <?= $this->section('content'); ?>
 
+
 <div class="contenidoPagina">
 
     <?php if (session()->has('message')): ?>
@@ -69,7 +70,7 @@
         </div>
 
         <div class="exportarFiltrar">
-            <button class="btn1">Exportar</button>
+            <button id="exportButton" class="btn1">Exportar</button>
             <button class="btn1"  id="filtroBtn4">Filtrar Tabla</button>
         </div>
     </div>
@@ -147,7 +148,23 @@
     </div>
 </div>
 
-
+<!-- Modal -->
+<div class="modal25" id="exportModal25" tabindex="-1" role="dialog" aria-labelledby="exportModalLabel25" aria-hidden="true">
+  <div class="modal-dialog25" role="document">
+    <div class="modal-content25">
+      <div class="modal-header25">
+        <h5 class="modal-title25" id="exportModalLabel25">Exportar Tabla</h5>
+          <span aria-hidden="true" class="close25">&times;</span>
+      </div>
+      <div class="modal-body25">
+        <p>Seleccione el formato de exportación:</p>
+        <button onclick="exportTableToExcel('estudiantes')" class=" btn-success25">Excel</button>
+        <button onclick="exportTableToWord('estudiantes')" class=" btn-primary25">Word</button>
+        <button onclick="exportTableToPdf('estudiantes')" class=" btn-danger25">PDF</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -284,4 +301,86 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var modal = document.getElementById("exportModal25");
+    var btn = document.getElementById("exportButton");
+    var span = document.getElementsByClassName("close25")[0];
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
+
+function exportTableToExcel(tableClass) {
+    let table = document.querySelector(`.${tableClass}`);
+    let wb = XLSX.utils.table_to_book(table, {sheet: "Sheet JS"});
+    XLSX.writeFile(wb, 'tabla_estudiantes.xlsx');
+}
+
+function exportTableToWord(tableClass) {
+    let table = document.querySelector(`.${tableClass}`).outerHTML;
+    let html = `
+        <html>
+        <head>
+            <style>
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                }
+                th, td {
+                    border: 1px solid black;
+                    padding: 8px;
+                    text-align: left;
+                }
+                th {
+                    background-color: #f2f2f2;
+                }
+            </style>
+        </head>
+        <body>
+            ${table}
+        </body>
+        </html>`;
+    let blob = htmlDocx.asBlob(html);
+    saveAs(blob, 'tabla_estudiantes.docx');
+}
+
+function exportTableToPdf(tableClass) {
+    let { jsPDF } = window.jspdf;
+    let doc = new jsPDF();
+    doc.autoTable({
+        html: `.${tableClass}`,
+        styles: {
+            cellPadding: 3,
+            fontSize: 10,
+            halign: 'left',
+            valign: 'middle',
+            overflow: 'linebreak',
+            tableWidth: 'wrap',
+            lineColor: [44, 62, 80],
+            lineWidth: 0.1,
+        },
+        headStyles: {
+            fillColor: [242, 242, 242],
+            textColor: [0, 0, 0],
+            fontStyle: 'bold',
+        },
+    });
+    doc.save('tabla_estudiantes.pdf');
+}
+</script>
+
 <?= $this->endSection(); ?>

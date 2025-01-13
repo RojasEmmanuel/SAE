@@ -29,7 +29,7 @@
     <?php endif; ?>
 
     <div class="seccion-superior">
-        <h1 class="saludo">Bienvenido de nuevo Emmanuel! 🚀</h1>
+        <h1 class="saludo">Bienvenido de nuevo <?= session()->get('usernombre'); ?>! 🚀</h1>
         <p class="descripcion">Aquí podrás consultar y administrar información sobre los eventos realizados en el Instituto Tecnológico de Pochutla.</p>
     
         <div class="detalles">
