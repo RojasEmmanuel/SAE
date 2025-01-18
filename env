@@ -14,7 +14,7 @@
 # APP
 #--------------------------------------------------------------------
 
-#app.baseURL = 'http://localhost/nombre_de_tu_proyecto/public/' # URL base de tu aplicación
+#app.baseURL = 'http://localhost/SAE/public/' # URL base de tu aplicación
 #app.indexPage = '' # Nombre del archivo index (generalmente vacío en CI4)
 #app.uriProtocol = 'REQUEST_URI' # Protocolo URI
 #app.charset = 'UTF-8' # Codificación de caracteres
@@ -27,9 +27,9 @@
 #--------------------------------------------------------------------
 
 #database.default.hostname = 'localhost' # Host de la base de datos
-#database.default.database = 'nombre_de_tu_base_de_datos' # Nombre de la base de datos
-#database.default.username = 'usuario_de_tu_base_de_datos' # Usuario de la base de datos
-#database.default.password = 'contraseña_de_tu_base_de_datos' # Contraseña de la base de datos
+#database.default.database = 'scasisencias' # Nombre de la base de datos
+#database.default.username = 'root' # Usuario de la base de datos
+#database.default.password = '' # Contraseña de la base de datos
 #database.default.DBDriver = 'MySQLi' # Driver de la base de datos
 #database.default.DBPrefix = '' # Prefijo de las tablas (opcional)
 #database.default.pConnect = false # Conexión persistente
