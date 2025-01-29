@@ -11,7 +11,7 @@
     <link href="<?= base_url('css/importar.css?v=' . time()); ?>" rel="stylesheet">
     <link href="<?= base_url('css/estudiantesDocentes.css?v=' . time()); ?>" rel="stylesheet">
     <link href="<?= base_url('css/paginaPrincipal.css?v=' . time()); ?>" rel="stylesheet"> 
-    
+    <link href="<?= base_url('css/formatoConfig.css?v=' . time()); ?>" rel="stylesheet"> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html-docx-js/0.4.0/html-docx.min.js"></script>
@@ -57,10 +57,11 @@
         <li><a href="<?= base_url('/proximos') ?>">Eventos Proximos</a></li>
         <li><a href="<?= base_url('/estudiantes') ?>">Estudiantes</a></li>
         <li><a href="<?= base_url('/docentes') ?>">Docentes</a></li>
-        <li><a href="<?= base_url('/formatos') ?>">Formatos</a></li>
+        <li><a href="<?= base_url('/formatos') ?>">Configuración formato</a></li>
         <li><a href="<?= base_url('/importar') ?>">Importar Datos</a></li>
     </ul>
 </div>
+
 <script>
     // JavaScript para mostrar/ocultar el menú desplegable
     document.getElementById('toggleMenu').addEventListener('click', function() {
