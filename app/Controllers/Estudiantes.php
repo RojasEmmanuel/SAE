@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\EstudiantesModel;
 
 class Estudiantes extends BaseController
 {
